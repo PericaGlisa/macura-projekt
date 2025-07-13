@@ -1,0 +1,200 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { Award, Users, Target, Lightbulb } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { useIntersectionObserver } from '@/hooks/use-intersection-observer';
+
+const stats = [
+  { number: '35+', label: 'Završenih projekata' },
+  { number: '8+', label: 'Godina iskustva' },
+  { number: '12+', label: 'Osvojenih nagrada' },
+  { number: '98%', label: 'Zadovoljstvo klijenata' },
+];
+
+const values = [
+  {
+    icon: <Target className="w-8 h-8" />,
+    title: 'Vizija',
+    description: 'Zamišljam prostore koji prevazilaze obično, kreirajući okruženja koja inspirišu i uzdižu ljudsko iskustvo.'
+  },
+  {
+    icon: <Lightbulb className="w-8 h-8" />,
+    title: 'Inovacija',
+    description: 'Pomeram granice dizajna kroz najsavremeniju tehnologiju i napredna arhitektonska rešenja.'
+  },
+  {
+    icon: <Award className="w-8 h-8" />,
+    title: 'Izvrsnost',
+    description: 'Beskompromisna posvećenost kvalitetu i preciznosti u svakom detalju mojih arhitektonskih kreacija.'
+  },
+  {
+    icon: <Users className="w-8 h-8" />,
+    title: 'Saradnja',
+    description: 'Gradim trajna partnerstva sa klijentima kroz transparentnu komunikaciju i zajedničku kreativnu viziju.'
+  },
+];
+
+export default function About() {
+  const { ref: parallaxRef, isIntersecting } = useIntersectionObserver({ threshold: 0.3 });
+
+  return (
+    <section 
+      id="about"
+      className="py-20 relative overflow-hidden bg-gradient-to-br from-gray-900 to-black"
+      ref={parallaxRef}
+    >
+        {/* Background image that barely shows through */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url("/portfolio-6.jpg")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed',
+            opacity: 0.01
+          }}
+        />
+
+        <div className="container mx-auto px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-6">
+            O <span className="text-gradient">meni</span>
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+            Oblikujem arhitektonske snove u stvarnost, 
+            kreirajući luksuzne prostore koji ne samo da zadovoljavaju očekivanja, već ih nadmašuju i ostavljaju trajni utisak.
+          </p>
+        </motion.div>
+
+        {/* Company Story */}
+        <div className="grid lg:grid-cols-2 gap-16 mb-20">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-3xl font-serif font-bold mb-6 text-gradient">Moja priča</h3>
+            <div className="space-y-4 text-white/80">
+              <p>
+                Rođen iz duboke strasti prema transformativnoj moći arhitekture, Macura Projekt 
+                preobražava snove u stvarnost. Ono što je započeto kao vizionarska misija danas je 
+                priznata firma koja definiše budućnost luksuznog dizajna.
+              </p>
+              <p>
+                Svaki projekat koji kreiram je priča o prevazilaženju granica i intimnih oaza 
+                koje redefinišu pojam doma. 
+                Moja posvećenost nije samo u kreiranju prostora, već u oblikovanju iskustava koja traju zauvek.
+              </p>
+              <p>
+                Svaki detalj nosi potpis moje nepokolebljive posvećenosti savršenstvu, 
+                održivosti i inovaciji koja nadahnjuje generacije.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div className="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="/about-image.jpg"
+                alt="Luksuzni enterijer"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Animated Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
+        >
+          {stats.map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <motion.div 
+                className="text-4xl md:text-5xl font-bold text-gradient mb-2"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
+                viewport={{ once: true }}
+              >
+                {stat.number}
+              </motion.div>
+              <div className="text-white/70 text-sm">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Core Values */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h3 className="text-3xl font-serif font-bold mb-4">Moje osnovne vrednosti</h3>
+          <p className="text-white/80 max-w-2xl mx-auto">
+            Fundamentalne vrednosti koje transformišu svaku viziju u arhitektonsko remek delo koje ostavlja trajni utisak.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {values.map((value, index) => (
+            <motion.div
+              key={value.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+            >
+              <Card className="h-full bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-[#C4A572]/50 transition-all duration-300 group">
+                <CardContent className="p-6 text-center">
+                  <motion.div 
+                    className="luxury-gradient p-3 rounded-lg inline-flex mb-4 group-hover:scale-110 transition-transform"
+                    whileHover={{ rotate: 5 }}
+                  >
+                    <div className="text-black">
+                      {value.icon}
+                    </div>
+                  </motion.div>
+                  <h4 className="text-xl font-serif font-bold mb-3 text-white">
+                    {value.title}
+                  </h4>
+                  <p className="text-white/70 text-sm leading-relaxed">
+                    {value.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
