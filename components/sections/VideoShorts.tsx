@@ -82,19 +82,26 @@ function VideoPlayer({ video, index }: VideoPlayerProps) {
       <div className="relative aspect-[9/16] overflow-hidden">
         <video
           ref={videoRef}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${
+            video.id === '1' || video.id === '4' ? 'mobile-video-fix' : ''
+          }`}
           loop
           muted={isMuted}
           playsInline
-          preload="metadata"
+          preload={video.id === '1' || video.id === '4' ? 'auto' : 'metadata'}
           onEnded={() => setIsPlaying(false)}
           onError={() => console.log('Video failed to load:', video.videoUrl)}
           style={{
-            imageRendering: 'crisp-edges'
+            imageRendering: 'crisp-edges',
+            ...(video.id === '1' || video.id === '4' ? {
+              filter: 'contrast(1.1) brightness(1.05) saturate(1.1)',
+              WebkitFilter: 'contrast(1.1) brightness(1.05) saturate(1.1)'
+            } : {})
           } as React.CSSProperties & {
             WebkitImageRendering?: string;
             MozImageRendering?: string;
             msImageRendering?: string;
+            WebkitFilter?: string;
           }}
         >
           <source src={video.videoUrl} type="video/mp4" />

@@ -261,9 +261,24 @@ textarea:focus-visible {
     transform: translate3d(0, 0, 0);
   }
   
+  /* Specific fixes for problematic videos on mobile */
+  .mobile-video-fix {
+    -webkit-filter: contrast(1.2) brightness(1.1) saturate(1.15) !important;
+    filter: contrast(1.2) brightness(1.1) saturate(1.15) !important;
+    -webkit-transform: translateZ(0) scale(1.01);
+    transform: translateZ(0) scale(1.01);
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimizeQuality;
+  }
+  
   /* Disable hover effects on mobile to prevent blurry scaling */
   .group:hover video {
     transform: none !important;
+  }
+  
+  .group:hover .mobile-video-fix {
+    -webkit-transform: translateZ(0) scale(1.01) !important;
+    transform: translateZ(0) scale(1.01) !important;
   }
 }
 
