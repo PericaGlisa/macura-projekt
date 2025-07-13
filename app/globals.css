@@ -247,3 +247,29 @@ textarea:focus-visible {
     color: black !important;
   }
 }
+
+/* Video quality optimizations for mobile */
+@media (max-width: 768px) {
+  video {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  
+  /* Disable hover effects on mobile to prevent blurry scaling */
+  .group:hover video {
+    transform: none !important;
+  }
+}
+
+/* Force hardware acceleration for videos */
+video {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}

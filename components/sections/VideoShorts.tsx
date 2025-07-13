@@ -89,6 +89,13 @@ function VideoPlayer({ video, index }: VideoPlayerProps) {
           preload="metadata"
           onEnded={() => setIsPlaying(false)}
           onError={() => console.log('Video failed to load:', video.videoUrl)}
+          style={{
+            imageRendering: 'crisp-edges',
+            WebkitImageRendering: 'crisp-edges',
+            MozImageRendering: 'crisp-edges',
+            msImageRendering: 'crisp-edges',
+            imageRendering: '-webkit-optimize-contrast'
+          }}
         >
           <source src={video.videoUrl} type="video/mp4" />
           Vaš browser ne podržava video reprodukciju.

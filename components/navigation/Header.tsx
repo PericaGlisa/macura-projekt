@@ -89,8 +89,8 @@ export default function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className={`md:hidden text-white transition-colors ${
-              isMobileMenuOpen ? 'bg-[#C4A572] hover:bg-[#C4A572]/90' : 'hover:bg-white/10'
+            className={`md:hidden transition-colors ${
+              isMobileMenuOpen ? 'bg-[#C4A572] hover:bg-[#C4A572]/90 text-black' : 'text-[#C4A572] hover:bg-[#C4A572]/10 hover:text-[#D4B886]'
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
