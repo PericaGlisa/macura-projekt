@@ -18,25 +18,25 @@ const videoShorts: VideoShort[] = [
     id: '1',
     title: 'Moderni enterijer',
     description: 'Savremeni pristup dizajnu',
-    videoUrl: '/videos/short1.mp4'
+    videoUrl: '/videos/short1.webm'
   },
   {
     id: '2',
     title: 'Luksuzni detalji',
     description: 'Pažnja posvećena svakom detalju',
-    videoUrl: '/videos/short2.mp4'
+    videoUrl: '/videos/short2.webm'
   },
   {
     id: '3',
     title: 'Arhitektonska vizija',
     description: 'Inovativna rešenja prostora',
-    videoUrl: '/videos/short3.mp4'
+    videoUrl: '/videos/short3.webm'
   },
   {
     id: '4',
     title: 'Elegantni prostori',
     description: 'Harmonija forme i funkcije',
-    videoUrl: '/videos/short4.mp4'
+    videoUrl: '/videos/short4.webm'
   }
 ];
 
@@ -104,7 +104,7 @@ function VideoPlayer({ video, index }: VideoPlayerProps) {
             WebkitFilter?: string;
           }}
         >
-          <source src={video.videoUrl} type="video/mp4" />
+          <source src={video.videoUrl} type="video/webm" />
           Vaš browser ne podržava video reprodukciju.
         </video>
         
