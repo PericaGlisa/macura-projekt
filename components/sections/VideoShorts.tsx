@@ -90,11 +90,11 @@ function VideoPlayer({ video, index }: VideoPlayerProps) {
           onEnded={() => setIsPlaying(false)}
           onError={() => console.log('Video failed to load:', video.videoUrl)}
           style={{
-            imageRendering: 'crisp-edges',
-            WebkitImageRendering: 'crisp-edges',
-            MozImageRendering: 'crisp-edges',
-            msImageRendering: 'crisp-edges',
-            imageRendering: '-webkit-optimize-contrast'
+            imageRendering: 'crisp-edges'
+          } as React.CSSProperties & {
+            WebkitImageRendering?: string;
+            MozImageRendering?: string;
+            msImageRendering?: string;
           }}
         >
           <source src={video.videoUrl} type="video/mp4" />
