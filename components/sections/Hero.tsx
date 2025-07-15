@@ -30,7 +30,7 @@ const Hero = () => {
     {
       image: '/portfolio-4.jpg',
       title: 'Elegantna kuhinja',
-      description: 'Savremena kuhinja sa čistim linijama i premium materijalima'
+      description: 'Savremena kuhinja sa čistim linijama i premijum materijalima'
     },
     {
       image: '/portfolio-5.jpg',
@@ -40,7 +40,7 @@ const Hero = () => {
     {
       image: '/portfolio-6.jpg',
       title: 'Luksuzno kupatilo',
-      description: 'Spa-inspirisano kupatilo sa premium materijalima i elegantnim detaljima'
+      description: 'Spa-inspirisano kupatilo sa premijum materijalima i elegantnim detaljima'
     },
     {
       image: '/portfolio-7.jpg',
