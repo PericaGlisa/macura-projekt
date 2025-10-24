@@ -8,7 +8,7 @@ import { useIntersectionObserver } from '@/hooks/use-intersection-observer';
 const stats = [
   { number: '35+', label: 'Završenih projekata' },
   { number: '8+', label: 'Godina iskustva' },
-  { number: '12+', label: 'Osvojenih nagrada' },
+  { number: '5+', label: 'Osvojenih nagrada' },
   { number: '98%', label: 'Zadovoljstvo klijenata' },
 ];
 
@@ -65,11 +65,10 @@ export default function About() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-6">
-            O <span className="text-gradient">meni</span>
+            O <span className="text-gradient">nama</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            Oblikujem arhitektonske snove u stvarnost, 
-            kreirajući luksuzne prostore koji ne samo da zadovoljavaju očekivanja, već ih nadmašuju i ostavljaju trajni utisak.
+            Oblikujemo arhitektonske snove u stvarnosti, kreirajući prostore po meri koji ne samo da zadovoljavaju očekivanja, već ih nadmašuju i ostavljaju trajni utisak.
           </p>
         </motion.div>
 
@@ -84,18 +83,13 @@ export default function About() {
             <h3 className="text-3xl font-serif font-bold mb-6 text-gradient">Moja priča</h3>
             <div className="space-y-4 text-white/80">
               <p>
-                Rođen iz duboke strasti prema transformativnoj moći arhitekture, Macura Projekt 
-                preobražava snove u stvarnost. Ono što je započeto kao vizionarska misija danas je 
-                priznata firma koja definiše budućnost luksuznog dizajna.
+                Iz duboke strasti prema transformativnoj moći arhitekture, arhitekta Angelina Macura započela je putovanje koje je od vizije preraslo u studio prepoznat po stvaranju sofisticiranih i bezvremenskih prostora.
               </p>
               <p>
-                Svaki projekat koji kreiram je priča o prevazilaženju granica i intimnih oaza 
-                koje redefinišu pojam doma. 
-                Moja posvećenost nije samo u kreiranju prostora, već u oblikovanju iskustava koja traju zauvek.
+                "Moja posvećenost svakom projektu ogleda se u verovanju da arhitektura ne gradi samo zidove, već oblikuje iskustva i živote koji se u njima odvijaju. Ono što je započelo kao moja vizija, preraslo je u studio koji okuplja stručnjake i saradnike sa dugogodišnjim iskustvom u oblasti arhitekture i dizajna enterijera. Zajedno gradimo prostore u kojima se prepliću inovacija, održivost i bezvremenska elegancija. Naš tim posvećeno radi na tome da svaki projekat bude više od prostora, da postane prepoznatljiva priča o kvalitetu, poverenju, savršenstvu i iskustvu koje traje zauvek."
               </p>
-              <p>
-                Svaki detalj nosi potpis moje nepokolebljive posvećenosti savršenstvu, 
-                održivosti i inovaciji koja nadahnjuje generacije.
+              <p className="text-right font-serif italic">
+                Arhi. Angelina Macura
               </p>
             </div>
           </motion.div>

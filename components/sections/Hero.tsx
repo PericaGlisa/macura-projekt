@@ -14,53 +14,53 @@ const Hero = () => {
   const portfolioSlides = [
     {
       image: '/portfolio-1.jpg',
-      title: 'Moderni enterijer',
-      description: 'Elegantan dizajn dnevne sobe sa minimalističkim pristupom'
+      title: 'Legalizacija',
+      description: 'Legalizujte objekat, otvorite vrata novim mogućnostima'
     },
     {
       image: '/portfolio-2.jpg', 
-      title: 'Luksuzni apartman',
-      description: 'Sofisticiran enterijer sa toplim tonovima i modernim akcentima'
+      title: 'Projektovanje',
+      description: 'Projektovanje koje štedi vreme i uvećava vrednost investicije'
     },
     {
       image: '/portfolio-3.jpg',
-      title: 'Kreativni prostor',
-      description: 'Inovativan dizajn koji spaja funkcionalnost i estetiku'
+      title: 'Partnerstvo',
+      description: 'Vaš partner za svaki korak od prvog rendera do upotrebne dozvole'
     },
     {
       image: '/portfolio-4.jpg',
-      title: 'Elegantna kuhinja',
-      description: 'Savremena kuhinja sa čistim linijama i premijum materijalima'
+      title: 'Autentičnost',
+      description: 'Autentičan dizajn, pametna rešenja, objedinjena dokumentacija na jednom mestu'
     },
     {
       image: '/portfolio-5.jpg',
-      title: 'Prostrana dnevna soba',
-      description: 'Svetao i prostran dizajn sa prirodnim materijalima i toplim akcentima'
+      title: 'Arhitektura',
+      description: 'Arhitektura sa svrhom, dizajn sa dušom'
     },
     {
       image: '/portfolio-6.jpg',
-      title: 'Luksuzno kupatilo',
-      description: 'Spa-inspirisano kupatilo sa premijum materijalima i elegantnim detaljima'
+      title: '3D vizuelizacija',
+      description: '3D vizuelizacija kao iz stvarnog života, pogledajte budućnost svog prostora već danas'
     },
     {
       image: '/portfolio-7.jpg',
-      title: 'Moderna spavaća soba',
-      description: 'Sofisticiran dizajn spavaće sobe sa umirujućim tonovima i luksuznim tekstilima'
+      title: 'Budućnost',
+      description: 'U korak sa budućnošću, životnim navikama i potrebama'
+    },
+    {
+      image: '/portfolio-8.jpg',
+      title: 'Trajni dizajn',
+      description: 'Dizajniramo prostor koji vam neće dosaditi za 3 meseca'
     },
     {
       image: '/portfolio-9.jpg',
-      title: 'Otvoreni koncept',
-      description: 'Inovativni otvoreni koncept koji spaja kuhinju, trpezariju i dnevni boravak'
+      title: 'Emocija',
+      description: 'Kreiramo prostore koji bude emociju'
     },
     {
       image: '/portfolio-10.jpg',
-      title: 'Savremeni dizajn',
-      description: 'Moderan pristup dizajnu enterijera sa fokusom na funkcionalnost i estetiku'
-    },
-    {
-      image: '/portfolio-11.jpg',
-      title: 'Elegantni detalji',
-      description: 'Pažljivo odabrani detalji koji stvaraju sofisticiran i luksuzan ambijent'
+      title: 'Kvalitet',
+      description: 'Stil za dušu, projektujemo kvalitet koji traje'
     }
   ];
   
@@ -156,16 +156,24 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-5xl mx-auto text-center"
         >
-          {/* Main Title */}
-          <motion.h1
+          {/* Logo instead of Main Title */}
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold mb-4 sm:mb-6 leading-tight text-white drop-shadow-2xl"
+            className="mb-4 sm:mb-6 flex justify-center"
           >
-            Arhitektonska
-            <span className="block text-gradient">izvrsnost</span>
-          </motion.h1>
+            <div className="bg-white/5 sm:bg-white/5 backdrop-blur-[3px] sm:backdrop-blur-sm p-3 sm:p-4 rounded-lg sm:rounded-xl border border-white/10 sm:border-white/20">
+              <Image 
+                src="/MP logotip.png" 
+                alt="Macura Projekt Logo" 
+                width={600} 
+                height={240} 
+                className="drop-shadow-md sm:drop-shadow-lg filter brightness-110 contrast-110 w-full h-auto max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px]" 
+                priority
+              />
+            </div>
+          </motion.div>
           
           {/* Current Slide Info */}
           <AnimatePresence mode="wait">

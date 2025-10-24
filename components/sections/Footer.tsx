@@ -11,7 +11,7 @@ const footerLinks = {
     { name: 'Galerija', href: '#gallery' },
   ],
   about: [
-    { name: 'O meni', href: '#about' },
+    { name: 'O nama', href: '#about' },
     { name: 'Usluge', href: '#services' },
     { name: 'Blog', href: '#blog' },
   ],

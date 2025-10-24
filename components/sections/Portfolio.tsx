@@ -406,10 +406,10 @@ export default function Portfolio() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-6">
-            Moj <span className="text-gradient">portfolio</span>
+            <span className="text-gradient">Portfolio</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
-            Zaronite u svet vizionarskih projekata gde se svaki detalj pretvara u priču o savršenstvu i bezvremenskoj eleganciji.
+            Verujemo u moć prostora koji pokreće emociju, ovako to izgleda kada se savremena arhitektura susretne sa životom.
           </p>
         </motion.div>
 

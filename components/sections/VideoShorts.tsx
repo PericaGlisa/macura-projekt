@@ -182,8 +182,7 @@ export default function VideoShorts() {
             Video <span className="text-gradient">galerija</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            Kratak uvid u moje najnovije projekte kroz dinamične video prezentacije
-            koje prikazuju suštinu modernog arhitektonskog dizajna.
+            Doživite vašu budućnost već danas.
           </p>
         </motion.div>
         
