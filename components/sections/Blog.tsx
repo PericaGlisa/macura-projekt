@@ -113,8 +113,19 @@ export default function Blog() {
   };
 
   return (
-    <section id="blog" className="py-20 bg-gradient-to-br from-gray-900 to-black">
-      <div className="container mx-auto px-6">
+    <section id="blog" className="py-20 bg-gradient-to-br from-gray-950 to-black relative overflow-hidden">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          backgroundImage: 'url("/portfolio-7.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+          opacity: 0.05
+        }}
+      />
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   description: 'Kreativni arhitektonski studio koji transformiše snove u izuzetne prostore - od luksuznih rezidencija do ikoničnih komercijalnih objekata.',
   keywords: 'arhitektura, luksuzni dizajn, premium zgrade, arhitektonske usluge, moderna arhitektura',
   authors: [{ name: 'Macura Projekt' }],
+  icons: {
+    icon: [
+      { url: '/MP logotip.png', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' }
+    ],
+    apple: '/MP logotip.png',
+    shortcut: '/MP logotip.png'
+  },
+  metadataBase: new URL('https://macuraprojekt.netlify.app'),
   openGraph: {
     title: 'Macura projekt | Gde vizija postaje stvarnost',
     description: 'Kreativni arhitektonski studio koji transformiše snove u izuzetne prostore - od luksuznih rezidencija do ikoničnih komercijalnih objekata.',
@@ -15,11 +24,11 @@ export const metadata: Metadata = {
     url: 'https://macuraprojekt.netlify.app',
     images: [
       {
-        url: 'https://macuraprojekt.netlify.app/about-image.jpg',
-        width: 1200,
-        height: 630,
+        url: '/MP logotip.png',
+        width: 600,
+        height: 240,
         alt: 'Macura projekt - Kreativni arhitektonski studio',
-        type: 'image/jpeg',
+        type: 'image/png',
       },
     ],
   },
@@ -27,7 +36,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Macura projekt | Gde vizija postaje stvarnost',
     description: 'Kreativni arhitektonski studio koji transformiše snove u izuzetne prostore - od luksuznih rezidencija do ikoničnih komercijalnih objekata.',
-    images: ['https://macuraprojekt.netlify.app/about-image.jpg'],
+    images: ['/MP logotip.png'],
     creator: '@macuraprojekt',
     site: '@macuraprojekt',
   },

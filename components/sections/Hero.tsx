@@ -163,16 +163,44 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-4 sm:mb-6 flex justify-center"
           >
-            <div className="bg-white/5 sm:bg-white/5 backdrop-blur-[3px] sm:backdrop-blur-sm p-3 sm:p-4 rounded-lg sm:rounded-xl border border-white/10 sm:border-white/20">
-              <Image 
-                src="/MP logotip.png" 
-                alt="Macura Projekt Logo" 
-                width={600} 
-                height={240} 
-                className="drop-shadow-md sm:drop-shadow-lg filter brightness-110 contrast-110 w-full h-auto max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px]" 
-                priority
-              />
-            </div>
+            <motion.div 
+              className="bg-white/3 sm:bg-white/3 backdrop-blur-[1px] sm:backdrop-blur-[2px] p-3 sm:p-4 rounded-lg sm:rounded-xl border border-white/10 sm:border-white/15"
+              animate={{ 
+                scale: [1, 1.02, 1],
+                boxShadow: [
+                  "0 0 0 rgba(196, 165, 114, 0)",
+                  "0 0 15px rgba(196, 165, 114, 0.3)",
+                  "0 0 0 rgba(196, 165, 114, 0)"
+                ]
+              }}
+              transition={{
+                duration: 3,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatType: "reverse"
+              }}
+            >
+              <motion.div
+                animate={{ 
+                  filter: ["brightness(105%) contrast(105%)", "brightness(115%) contrast(115%)", "brightness(105%) contrast(105%)"]
+                }}
+                transition={{
+                  duration: 3,
+                  ease: "easeInOut",
+                  repeat: Infinity,
+                  repeatType: "reverse"
+                }}
+              >
+                <Image 
+                  src="/MP logotip.png" 
+                  alt="Macura Projekt Logo" 
+                  width={600} 
+                  height={240} 
+                  className="drop-shadow-md sm:drop-shadow-lg w-full h-auto max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px]" 
+                  priority
+                />
+              </motion.div>
+            </motion.div>
           </motion.div>
           
           {/* Current Slide Info */}
