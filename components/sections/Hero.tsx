@@ -95,7 +95,7 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex flex-col overflow-hidden"
+      className="relative min-h-[100svh] flex flex-col overflow-hidden"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -149,7 +149,7 @@ const Hero = () => {
       </button>
 
       {/* Content - Takes up most of the space */}
-      <div className="relative z-20 container mx-auto px-4 sm:px-6 flex-1 flex items-center justify-center pt-20 sm:pt-24">
+      <div className="relative z-20 container mx-auto px-4 sm:px-6 flex-1 flex items-center justify-center pt-16 sm:pt-20 md:pt-24">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -196,7 +196,7 @@ const Hero = () => {
                   alt="Macura Projekt Logo" 
                   width={450} 
                   height={180} 
-                  className="drop-shadow-md sm:drop-shadow-lg w-full h-auto max-w-[200px] sm:max-w-[280px] md:max-w-[350px] lg:max-w-[400px]" 
+                  className="drop-shadow-md sm:drop-shadow-lg w-full h-auto max-w-[180px] sm:max-w-[280px] md:max-w-[350px] lg:max-w-[400px]" 
                   priority
                 />
               </motion.div>
@@ -213,10 +213,10 @@ const Hero = () => {
               transition={{ duration: 0.5 }}
               className="mb-6 sm:mb-8"
             >
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#C4A572] mb-2 drop-shadow-lg">
+              <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold text-[#C4A572] mb-1 sm:mb-2 drop-shadow-lg">
                 {portfolioSlides[currentSlide].title}
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-lg px-4">
+              <p className="text-sm sm:text-base md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-lg px-2 sm:px-4">
                 {portfolioSlides[currentSlide].description}
               </p>
             </motion.div>
@@ -275,7 +275,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1.2 }}
-        className="relative z-20 pb-6 sm:pb-8 flex justify-center"
+        className="relative z-20 pb-4 sm:pb-6 md:pb-8 flex justify-center"
       >
         <motion.button
           animate={{ y: [0, 10, 0] }}
