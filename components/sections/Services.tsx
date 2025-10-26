@@ -179,7 +179,7 @@ export default function Services() {
 
         {/* Dialog za prikaz detaljnijih informacija */}
         <Dialog open={!!selectedService} onOpenChange={(open) => !open && setSelectedService(null)}>
-          <DialogContent className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 text-white max-w-[95vw] sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto h-[80vh] sm:h-auto overflow-y-auto rounded-lg sm:rounded-xl">
+          <DialogContent className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 text-white max-w-[95vw] sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto max-h-[80vh] overflow-y-auto rounded-lg sm:rounded-xl">
             <DialogHeader>
               <DialogTitle className="text-xl sm:text-2xl md:text-3xl font-serif font-bold flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
                 <div className="luxury-gradient p-2 sm:p-3 rounded-lg inline-flex">

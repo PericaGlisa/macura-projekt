@@ -8,11 +8,10 @@ export const metadata: Metadata = {
   authors: [{ name: 'Macura Projekt' }],
   icons: {
     icon: [
-      { url: '/MP logotip.png', type: 'image/png' },
-      { url: '/favicon.svg', type: 'image/svg+xml' }
+      { url: '/favicon.png', type: 'image/png' }
     ],
-    apple: '/MP logotip.png',
-    shortcut: '/MP logotip.png'
+    apple: '/favicon.png',
+    shortcut: '/favicon.png'
   },
   metadataBase: new URL('https://macuraprojekt.netlify.app'),
   openGraph: {
@@ -24,11 +23,11 @@ export const metadata: Metadata = {
     url: 'https://macuraprojekt.netlify.app',
     images: [
       {
-        url: '/MP logotip.png',
-        width: 600,
-        height: 240,
+        url: '/about-image.jpg',
+        width: 1200,
+        height: 630,
         alt: 'Macura projekt - Kreativni arhitektonski studio',
-        type: 'image/png',
+        type: 'image/jpeg',
       },
     ],
   },
@@ -36,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Macura projekt | Gde vizija postaje stvarnost',
     description: 'Kreativni arhitektonski studio koji transformiše snove u izuzetne prostore - od luksuznih rezidencija do ikoničnih komercijalnih objekata.',
-    images: ['/MP logotip.png'],
+    images: ['/about-image.jpg'],
     creator: '@macuraprojekt',
     site: '@macuraprojekt',
   },
@@ -72,9 +71,8 @@ export default function RootLayout({
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta name="twitter:image" content="https://macuraprojekt.netlify.app/about-image.jpg" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/favicon.svg" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preload" href="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920" as="image" />

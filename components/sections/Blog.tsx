@@ -1,10 +1,18 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, Clock, ArrowRight, User, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useState } from 'react';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogClose,
+} from "@/components/ui/dialog";
 
 const blogPosts = [
   {
@@ -103,13 +111,18 @@ const blogPosts = [
 
 export default function Blog() {
   const [selectedPost, setSelectedPost] = useState<typeof blogPosts[0] | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const openPost = (post: typeof blogPosts[0]) => {
     setSelectedPost(post);
+    setIsOpen(true);
   };
 
   const closePost = () => {
-    setSelectedPost(null);
+    setIsOpen(false);
+    setTimeout(() => {
+      setSelectedPost(null);
+    }, 300); // Delay to allow animation to complete
   };
 
   return (
@@ -126,29 +139,19 @@ export default function Blog() {
         }}
       />
       <div className="container mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-6">
             Arhitektonski <span className="text-gradient">uvidi</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed px-4">
             Zaronite u svet vizionarskih ideja i otkrijte kako se rađaju prostori koji menjaju način na koji živimo i radimo.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
           {blogPosts.map((post, index) => (
-            <motion.div
+            <div
               key={post.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
             >
               <Card 
                 className="group h-full bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-[#C4A572]/50 transition-all duration-300 cursor-pointer"
@@ -211,96 +214,79 @@ export default function Blog() {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        {/* Modal */}
-        <AnimatePresence>
+        {/* Modal - Implementacija sa shadcn/ui Dialog komponentom */}
+        <Dialog open={isOpen} onOpenChange={(open) => {
+          if (!open) closePost();
+        }}>
           {selectedPost && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
-              onClick={closePost}
-            >
-              <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-lg shadow-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto"
-                onClick={(e) => e.stopPropagation()}
-              >
-                {/* Header */}
-                <div className="relative">
-                  <img
-                    src={selectedPost.image}
-                    alt={selectedPost.title}
-                    className="w-full h-48 sm:h-64 object-cover rounded-t-lg"
-                  />
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white"
-                    onClick={closePost}
-                  >
-                    <X className="w-6 h-6" />
-                  </Button>
+            <DialogContent className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-lg shadow-2xl max-w-4xl w-[95%] sm:w-[90%] md:w-[85%] lg:w-[80%] max-h-[90vh] p-0 overflow-hidden" hideCloseButton>
+              {/* Header */}
+              <div className="relative">
+                <img
+                  src={selectedPost.image}
+                  alt={selectedPost.title}
+                  className="w-full h-48 sm:h-64 object-cover rounded-t-lg"
+                />
+                <DialogClose className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white rounded-full p-1">
+                  <X className="w-6 h-6" />
+                </DialogClose>
+              </div>
+
+              {/* Content - Dodana max-h-[calc(90vh-16rem)] za skrol */}
+              <div className="p-6 sm:p-8 overflow-y-auto max-h-[calc(90vh-16rem)] sm:max-h-[calc(90vh-18rem)]">
+                {/* Meta info */}
+                <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-white/60">
+                  <span className="text-[#C4A572] font-medium">{selectedPost.category}</span>
+                  <div className="flex items-center gap-1">
+                    <Calendar className="w-4 h-4" />
+                    <span>{selectedPost.date}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Clock className="w-4 h-4" />
+                    <span>{selectedPost.readTime}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <User className="w-4 h-4" />
+                    <span>{selectedPost.author}</span>
+                  </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-6 sm:p-8">
-                  {/* Meta info */}
-                  <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-white/60">
-                    <span className="text-[#C4A572] font-medium">{selectedPost.category}</span>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      <span>{selectedPost.date}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      <span>{selectedPost.readTime}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <User className="w-4 h-4" />
-                      <span>{selectedPost.author}</span>
-                    </div>
-                  </div>
+                {/* Title */}
+                <DialogTitle className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white mb-4 sm:mb-6">
+                  {selectedPost.title}
+                </DialogTitle>
 
-                  {/* Title */}
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white mb-4 sm:mb-6">
-                    {selectedPost.title}
-                  </h1>
+                {/* Introduction */}
+                <DialogDescription className="text-base sm:text-lg text-white/80 mb-6 sm:mb-8 leading-relaxed">
+                  {selectedPost.content.intro}
+                </DialogDescription>
 
-                  {/* Introduction */}
-                  <p className="text-base sm:text-lg text-white/80 mb-6 sm:mb-8 leading-relaxed">
-                    {selectedPost.content.intro}
-                  </p>
-
-                  {/* Sections */}
-                  {selectedPost.content.sections.map((section, index) => (
-                    <div key={index} className="mb-6 sm:mb-8">
-                      <h2 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-[#C4A572] mb-3 sm:mb-4">
-                        {section.title}
-                      </h2>
-                      <p className="text-sm sm:text-base text-white/80 leading-relaxed">
-                        {section.text}
-                      </p>
-                    </div>
-                  ))}
-
-                  {/* Conclusion */}
-                  <div className="border-t border-gray-800 pt-6 sm:pt-8">
-                    <p className="text-base sm:text-lg text-white/80 leading-relaxed font-medium">
-                      {selectedPost.content.conclusion}
+                {/* Sections */}
+                {selectedPost.content.sections.map((section, index) => (
+                  <div key={index} className="mb-6 sm:mb-8">
+                    <h2 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-[#C4A572] mb-3 sm:mb-4">
+                      {section.title}
+                    </h2>
+                    <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+                      {section.text}
                     </p>
                   </div>
+                ))}
+
+                {/* Conclusion */}
+                <div className="border-t border-gray-800 pt-6 sm:pt-8">
+                  <p className="text-base sm:text-lg text-white/80 leading-relaxed font-medium">
+                    {selectedPost.content.conclusion}
+                  </p>
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </DialogContent>
           )}
-        </AnimatePresence>
+        </Dialog>
       </div>
     </section>
   );

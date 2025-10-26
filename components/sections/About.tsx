@@ -7,8 +7,7 @@ import { useIntersectionObserver } from '@/hooks/use-intersection-observer';
 
 const stats = [
   { number: '35+', label: 'Završenih projekata' },
-  { number: '8+', label: 'Godina iskustva' },
-  { number: '5+', label: 'Osvojenih nagrada' },
+  { number: '5+', label: 'Godina iskustva' },
   { number: '98%', label: 'Zadovoljstvo klijenata' },
 ];
 
@@ -118,7 +117,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
+          className="grid grid-cols-3 md:grid-cols-3 gap-8 mb-20 mx-auto max-w-4xl"
         >
           {stats.map((stat, index) => (
             <motion.div

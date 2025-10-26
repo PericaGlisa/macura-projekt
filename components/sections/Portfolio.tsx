@@ -73,7 +73,7 @@ const projects = [
     description: 'Luksuzni enterijer sa mermernim akcentima i savremenim dizajnerskim rešenjima.',
     fullDescription: 'Projekat u Bloku 45 predstavlja spoj luksuza i funkcionalnosti. Karakteristični mermerni zidovi, moderno osvetljenje i pažljivo odabran nameštaj stvaraju sofisticiran ambijent. Poseban akcenat je stavljen na radni prostor i biblioteku, koji kombinuju estetiku sa praktičnošću.',
     specifications: {
-      'Površina': '85 m²',
+      'Površina': '115 m²',
       'Prostorije': 'Dnevna soba, spavaća soba, radni prostor, kupatilo',
       'Stil': 'Luksuzan moderan',
       'Materijali': 'Mermer, drvo, staklo, metal',
@@ -83,7 +83,7 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Neda',
+    title: 'Elixir Garden',
     category: 'Enterijer',
     year: '2024',
     location: 'Beograd',
@@ -100,9 +100,9 @@ const projects = [
       '/projects/neda/9.webp'
     ],
     description: 'Elegantan enterijer koji kombinuje savremeni dizajn sa toplinom doma.',
-    fullDescription: 'Projekat Neda u Beogradu predstavlja savršen spoj modernog dizajna i udobnosti. Pažljivo odabrani materijali i detalji stvaraju harmoničan prostor koji odražava sofisticiranost i funkcionalnost. Svaka prostorija je osmišljena da pruži maksimalan komfor uz očuvanje estetske vrednosti.',
+    fullDescription: 'Projekat Elixir Garden u Beogradu predstavlja savršen spoj modernog dizajna i udobnosti. Pažljivo odabrani materijali i detalji stvaraju harmoničan prostor koji odražava sofisticiranost i funkcionalnost. Svaka prostorija je osmišljena da pruži maksimalan komfor uz očuvanje estetske vrednosti.',
     specifications: {
-      'Površina': '95 m²',
+      'Površina': '25 m²',
       'Prostorije': 'Dnevna soba, kuhinja, spavaća soba, kupatilo',
       'Stil': 'Savremen',
       'Materijali': 'Drvo, staklo, prirodni kamen',
@@ -168,7 +168,7 @@ const projects = [
     description: 'Savremeni enterijer sa živopisnim akcentima i modernim pristupom dizajnu.',
     fullDescription: 'Projekat Novi Sad 2 predstavlja inovativni pristup modernom dizajnu enterijera. Karakterišu ga živi tirkizni, zeleni, žuti, ljubičasti i crveni akcenti koji stvaraju dinamičan i energičan ambijent. Svaka prostorija ima svoju jedinstvenu paletu boja koja doprinosi celokupnoj harmoniji prostora. Dnevna soba sa tirkiznim zidovima, kuhinja sa zelenim akcentima, spavaća soba u toplim žutim tonovima, kupatilo sa ljubičastim detaljima i radni prostor sa crvenim akcentima čine ovaj projekat posebnim i nezaboravnim.',
     specifications: {
-      'Površina': '100 m²',
+      'Površina': '45 m²',
       'Prostorije': 'Dnevna soba, kuhinja, spavaća soba, kupatilo, radni prostor',
       'Stil': 'Savremeni sa živopisnim akcentima',
       'Materijali': 'Drvo, staklo, prirodni materijali',
@@ -270,7 +270,7 @@ const projects = [
     description: 'Moderni enterijer sa sivim tonovima, drvenim akcentima i narandžastim detaljima.',
     fullDescription: 'Projekat Surčin predstavlja savršen spoj modernog dizajna i toplih tonova. Karakterišu ga sivi tonovi kao osnova, drveni akcenti koji donose prirodnost i narandžasti detalji koji stvaraju toplu i savremenu atmosferu. Svaka prostorija je pažljivo osmišljena da pruži maksimalan komfor uz očuvanje estetske vrednosti i funkcionalnosti.',
     specifications: {
-      'Površina': '120 m²',
+      'Površina': '55 m²',
       'Prostorije': 'Dnevna soba, kuhinja, spavaće sobe, kupatilo',
       'Stil': 'Moderni',
       'Materijali': 'Drvo, staklo, tekstil',
@@ -297,7 +297,7 @@ const projects = [
     description: 'Elegantan enterijer sa toplim tonovima, drvenim akcentima i zlatnim detaljima.',
     fullDescription: 'Projekat Vračar predstavlja savršen spoj elegancije i funkcionalnosti u srcu Beograda. Karakterišu ga topli tonovi koji stvaraju udobnu atmosferu, drveni akcenti koji donose prirodnost i sofisticiranost, kao i pažljivo odabrani sivi elementi koji doprinose modernom izgledu. Zlatni detalji dodaju luksuzni dodir celokupnom ambijentu. Svaka prostorija je osmišljena da pruži maksimalan komfor uz očuvanje estetske vrednosti.',
     specifications: {
-      'Površina': '95 m²',
+      'Površina': '78 m²',
       'Prostorije': 'Dnevna soba, kuhinja, spavaća soba, kupatilo',
       'Stil': 'Elegantan moderan',
       'Materijali': 'Drvo, mermer, staklo, zlato',
@@ -323,7 +323,7 @@ const projects = [
     description: 'Moderan enterijer sa elegantnim dizajnom, toplim tonovima i funkcionalnim rešenjima.',
     fullDescription: 'Projekat Zvezdara predstavlja savršen spoj modernog dizajna i funkcionalnosti u srcu Beograda. Karakterišu ga topli tonovi koji stvaraju udobnu atmosferu, drveni akcenti koji donose prirodnost i sofisticiranost, kao i pažljivo odabrani sivi elementi koji doprinose savremenom izgledu. Svaka prostorija je osmišljena da pruži maksimalan komfor uz očuvanje estetske vrednosti, od prostrane dnevne sobe sa elegantnim nameštajem, preko moderne kuhinje sa funkcionalnim rešenjima, do mirne spavaće sobe i luksuznog kupatila.',
     specifications: {
-      'Površina': '110 m²',
+      'Površina': '75 m²',
       'Prostorije': 'Dnevna soba, kuhinja, spavaća soba, kupatilo, radni prostor',
       'Stil': 'Moderan',
       'Materijali': 'Drvo, mermer, staklo, prirodni materijali',
