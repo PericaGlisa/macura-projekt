@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     url: 'https://macuraprojekt.netlify.app',
     images: [
       {
-        url: '/about-image.jpg',
+        url: '/og-image.svg',
         width: 1200,
         height: 630,
         alt: 'Macura projekt - Kreativni arhitektonski studio',
-        type: 'image/jpeg',
+        type: 'image/svg+xml',
       },
     ],
   },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Macura projekt | Gde vizija postaje stvarnost',
     description: 'Kreativni arhitektonski studio koji transformiše snove u izuzetne prostore - od luksuznih rezidencija do ikoničnih komercijalnih objekata.',
-    images: ['/about-image.jpg'],
+    images: ['/og-image.svg'],
     creator: '@macuraprojekt',
     site: '@macuraprojekt',
   },
@@ -66,11 +66,11 @@ export default function RootLayout({
         <meta name="theme-color" content="#C4A572" />
         <meta name="msapplication-navbutton-color" content="#C4A572" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta property="og:image" content="https://macuraprojekt.netlify.app/about-image.jpg" />
+        <meta property="og:image" content="https://macuraprojekt.netlify.app/og-image.svg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta name="twitter:image" content="https://macuraprojekt.netlify.app/about-image.jpg" />
+        <meta property="og:image:type" content="image/svg+xml" />
+        <meta name="twitter:image" content="https://macuraprojekt.netlify.app/og-image.svg" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
