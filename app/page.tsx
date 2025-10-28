@@ -6,7 +6,7 @@ import Portfolio from '@/components/sections/Portfolio';
 import VideoShorts from '@/components/sections/VideoShorts';
 import About from '@/components/sections/About';
 import Services from '@/components/sections/Services';
-import Testimonials from '@/components/sections/Testimonials';
+
 import Blog from '@/components/sections/Blog';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/sections/Footer';
@@ -21,7 +21,6 @@ export default function Home() {
       <Portfolio />
       <VideoShorts />
       <About />
-      <Testimonials />
       <Blog />
       <Contact />
       <Footer />

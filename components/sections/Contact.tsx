@@ -118,6 +118,17 @@ export default function Contact() {
       className="py-20 relative overflow-hidden bg-gradient-to-br from-gray-900 to-black"
       ref={parallaxRef}
     >
+      {/* Background image with parallax effect */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url("/portfolio-7.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+          opacity: 0.01
+        }}
+      />
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
