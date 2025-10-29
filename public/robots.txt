@@ -1,0 +1,26 @@
+# robots.txt za arhitektamacura.rs
+User-agent: *
+Allow: /
+
+# Dozvoli pristup svim botovima
+User-agent: Googlebot
+Allow: /
+User-agent: Googlebot-Image
+Allow: /
+User-agent: Googlebot-Mobile
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Yandex
+Allow: /
+
+# Blokiraj pristup određenim direktorijumima ako je potrebno
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap lokacija
+Sitemap: https://arhitektamacura.rs/sitemap.xml
+
+# Crawl-delay za sporije botove
+User-agent: *
+Crawl-delay: 10
