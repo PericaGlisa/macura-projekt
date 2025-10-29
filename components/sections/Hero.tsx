@@ -196,7 +196,7 @@ const Hero = () => {
                   alt="Macura Projekt Logo" 
                   width={450} 
                   height={180} 
-                  className="drop-shadow-md sm:drop-shadow-lg w-full h-auto max-w-[180px] sm:max-w-[280px] md:max-w-[350px] lg:max-w-[400px]" 
+                  className="drop-shadow-md sm:drop-shadow-lg w-full h-auto max-w-[150px] sm:max-w-[220px] md:max-w-[280px] lg:max-w-[320px]" 
                   priority
                 />
               </motion.div>
