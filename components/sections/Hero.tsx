@@ -280,7 +280,7 @@ const Hero = () => {
         <motion.button
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          onClick={() => scrollToElement('#portfolio')}
+          onClick={() => scrollToElement('#services')}
           className="flex flex-col items-center text-white/80 hover:text-white transition-colors cursor-pointer group"
         >
           <span className="text-xs sm:text-sm mb-2 drop-shadow-lg group-hover:text-[#C4A572] transition-colors">
