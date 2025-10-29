@@ -26,7 +26,7 @@ const contactInfo = [
   {
     icon: <Mail className="w-6 h-6" />,
     title: 'Imejl adresa',
-    details: [{ text: 'macuraproject@gmail.com', href: 'mailto:macuraproject@gmail.com' }] as ContactDetail[],
+    details: [{ text: 'info@arhitektamacura.rs', href: 'mailto:info@arhitektamacura.rs' }] as ContactDetail[],
   },
   {
     icon: <MessageSquare className="w-6 h-6" />,
@@ -36,7 +36,7 @@ const contactInfo = [
   {
     icon: <MapPin className="w-6 h-6" />,
     title: 'Adresa',
-    details: [{ text: 'Surčinska 25A' }, { text: 'Novi Beograd' }] as ContactDetail[],
+    details: [{ text: 'Surčinska 227' }, { text: 'Novi Beograd' }] as ContactDetail[],
   },
 ];
 
@@ -83,7 +83,7 @@ export default function Contact() {
       const subject = 'Nova poruka sa sajta';
       const body = `Ime: ${values.name}\n\nEmail: ${values.email}\n\nKompanija: ${values.company}\n\nPoruka:\n${values.message}`;
       
-      window.location.href = `mailto:macuraproject@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = `mailto:info@arhitektamacura.rs?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       
       setSubmitStatus('success');
       reset();
@@ -336,7 +336,7 @@ export default function Contact() {
             <Card className="bg-gradient-to-br from-gray-900/50 to-black/50 border-gray-800 overflow-hidden">
               <CardContent className="p-0 aspect-video">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.7059444238513!2d20.37663937675566!3d44.81512967107833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a6f93ba9e3ef1%3A0x6d4d760fcd2c4016!2sSur%C4%8Dinska%2025a%2C%20Beograd!5e0!3m2!1sen!2srs!4v1708444868387!5m2!1sen!2srs"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.5693810558354!2d20.3349848!3d44.8183103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a6f5c1b5f9e3d%3A0x7c5c7b9e5b8a7c9a!2sSur%C4%8Dinska%20227%2C%20Beograd!5e0!3m2!1sen!2srs!4v1708444868387!5m2!1sen!2srs"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

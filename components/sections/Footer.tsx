@@ -71,11 +71,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center justify-start space-x-3">
                 <Mail className="w-4 h-4 text-[#C4A572]" />
-                <a href="mailto:macuraproject@gmail.com" className="hover:text-[#C4A572] transition-colors">macuraproject@gmail.com</a>
+                <a href="mailto:info@arhitektamacura.rs" className="hover:text-[#C4A572] transition-colors">info@arhitektamacura.rs</a>
               </div>
               <div className="flex items-center justify-start space-x-3">
                 <MapPin className="w-4 h-4 text-[#C4A572]" />
-                <span>Surčinska 25A, Novi Beograd</span>
+                <span>Surčinska 227, Novi Beograd</span>
               </div>
             </div>
           </motion.div>
