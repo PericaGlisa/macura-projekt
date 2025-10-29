@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Instagram, BadgeCheck } from 'lucide-react';
 import { useSmoothScroll } from '@/hooks/use-smooth-scroll';
 
 const footerLinks = {
@@ -115,27 +115,42 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="border-t border-gray-800 mt-8 md:mt-10 lg:mt-12 pt-6 md:pt-8 flex flex-col sm:flex-row-reverse sm:justify-between items-center"
+          className="border-t border-gray-800 mt-8 md:mt-10 lg:mt-12 pt-6 md:pt-8"
         >
-          <div className="flex items-center space-x-4 sm:space-x-6 mb-3 sm:mb-0">
-            {socialLinks.map((social) => (
-              <motion.a
-                key={social.name}
-                href={social.href}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-white/60 text-xs sm:text-sm order-2 sm:order-1">
+              © 2025 Macura Projekt. Sva prava zadržana.
+            </p>
+            
+            <div className="flex items-center space-x-4 sm:space-x-6 order-1 sm:order-2">
+              {socialLinks.map((social) => (
+                <motion.a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="text-white/60 hover:text-[#C4A572] transition-colors"
+                  aria-label={social.name}
+                >
+                  {social.icon}
+                </motion.a>
+              ))}
+            </div>
+
+            <div className="flex items-center gap-1 text-xs sm:text-sm text-white/60 order-3">
+              Designed and developed by{' '}
+              <a
+                href="https://petarmiodrag2.xyz/"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -2 }}
-                className="text-white/60 hover:text-[#C4A572] transition-colors"
-                aria-label={social.name}
+                className="text-white/70 hover:text-[#C4A572] transition-colors"
               >
-                {social.icon}
-              </motion.a>
-            ))}
+                @petarmiodrag2
+              </a>
+              <BadgeCheck className="w-4 h-4 text-blue-500" />
+            </div>
           </div>
-          
-          <p className="text-white/60 text-xs sm:text-sm">
-            © 2025 Macura Projekt. Sva prava zadržana.
-          </p>
         </motion.div>
       </div>
     </footer>
